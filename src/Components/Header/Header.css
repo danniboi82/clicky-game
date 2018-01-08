@@ -1,6 +1,9 @@
 .Header {
-    background-color : black;
     color: white;
     padding : 150px;
+    background-image: url("https://wallpapercave.com/wp/nj3sc2A.jpg");
+    max-width: 100%;
+    max-height: 100%;
+    background-size: contain;
 }
 

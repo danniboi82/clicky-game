@@ -1,23 +1,39 @@
 import React, { Component } from 'react';
-// import '../../Static/images/Chief_Wiggum'
+import characters from './gameImages.json';
+import Thumbnail from '../Thumbnail/Thumbnail'
+
+
 
 
 class Gameboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            images: [
-                { id: 'pic00', img: {} }
-            ]
+            score: 0,
+            topScore: 0,
+            characters
+
         }
+    }
+
+    gamePlayHandler = () => {
+        
     }
 
     render() {
 
         return (
             <div>
-                <h1>HOW THE HELL DO I USE STATIC IMAGES in REACT!</h1>
-                <img src='https://upload.wikimedia.org/wikipedia/en/7/7a/Chief_Wiggum.png' />
+                {this.state.characters.map(simpsons => {
+                    return (
+                        <div style={{display: 'inline-block'}}>
+                            <Thumbnail 
+                            key={simpsons.id}
+                            image={simpsons.image}
+                            />
+                        </div>
+                    )
+                })}
             </div>
         );
     }
