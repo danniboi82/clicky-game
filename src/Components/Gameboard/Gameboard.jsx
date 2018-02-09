@@ -4,7 +4,7 @@ import Thumbnail from '../Thumbnail/Thumbnail';
 import { Col, Row, Container } from 'react-grid-system';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
-
+import Footer from '../Footer/Footer';
 
 
 class Gameboard extends Component {
@@ -88,9 +88,10 @@ class Gameboard extends Component {
             <div>
                 <Navbar />
                 <Header score={this.state.score} topScore={this.state.topScore} />
-                <Container>
+                <Container >
                     {gameImage}
                 </Container>
+                <Footer/>
             </div>
         );
     }
