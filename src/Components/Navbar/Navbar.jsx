@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
+import './Navbar.css';
 
 
 const handleClick = () => {
@@ -9,6 +10,8 @@ const handleClick = () => {
 
 const navbarStyle = {
     color: 'black',
+    fontFamily: "'Rock Salt', cursive",
+    fontSize: '30px'
 }
 
 const Navbar = (props) => {
@@ -16,12 +19,12 @@ const Navbar = (props) => {
         <div>
             <AppBar
                 href='/'
-                title='Clicky Game'
+                title='Simpsons Click Pic'
                 titleStyle={navbarStyle}
                 onTitleClick={handleClick}
                 iconClassNameRight='muidocs-icon-navigation-expand-more'
+                showMenuIconButton={false}
             >
-                <p><b>Score :</b> {props.score} | <b>Top Score</b> : {props.topScore}</p>
             </AppBar>
 
         </div>
